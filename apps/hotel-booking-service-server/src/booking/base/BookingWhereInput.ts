@@ -14,6 +14,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
+import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { CustomerWhereUniqueInput } from "../../customer/base/CustomerWhereUniqueInput";
 import { StringFilter } from "../../util/StringFilter";
 import { PaymentListRelationFilter } from "../../payment/base/PaymentListRelationFilter";
@@ -54,6 +55,17 @@ class BookingWhereInput {
     nullable: true,
   })
   checkOutDate?: DateTimeNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  comment?: StringNullableFilter;
 
   @ApiProperty({
     required: false,

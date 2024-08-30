@@ -6,6 +6,7 @@ export type BookingCreateInput = {
   bookingDate?: Date | null;
   checkInDate?: Date | null;
   checkOutDate?: Date | null;
+  comment?: string | null;
   customer?: CustomerWhereUniqueInput | null;
   payments?: PaymentCreateNestedManyWithoutBookingsInput;
   room?: RoomWhereUniqueInput | null;

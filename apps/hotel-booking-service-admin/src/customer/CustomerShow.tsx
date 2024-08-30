@@ -34,6 +34,7 @@ export const CustomerShow = (props: ShowProps): React.ReactElement => {
             <TextField label="bookingDate" source="bookingDate" />
             <TextField label="checkInDate" source="checkInDate" />
             <TextField label="checkOutDate" source="checkOutDate" />
+            <TextField label="comment" source="comment" />
             <DateField source="createdAt" label="Created At" />
             <ReferenceField
               label="customer"

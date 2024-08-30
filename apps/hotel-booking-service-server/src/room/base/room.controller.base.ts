@@ -209,6 +209,7 @@ export class RoomControllerBase {
         bookingDate: true,
         checkInDate: true,
         checkOutDate: true,
+        comment: true,
         createdAt: true,
 
         customer: {

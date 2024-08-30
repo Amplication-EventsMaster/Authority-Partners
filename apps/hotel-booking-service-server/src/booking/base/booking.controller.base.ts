@@ -53,6 +53,7 @@ export class BookingControllerBase {
         bookingDate: true,
         checkInDate: true,
         checkOutDate: true,
+        comment: true,
         createdAt: true,
 
         customer: {
@@ -86,6 +87,7 @@ export class BookingControllerBase {
         bookingDate: true,
         checkInDate: true,
         checkOutDate: true,
+        comment: true,
         createdAt: true,
 
         customer: {
@@ -120,6 +122,7 @@ export class BookingControllerBase {
         bookingDate: true,
         checkInDate: true,
         checkOutDate: true,
+        comment: true,
         createdAt: true,
 
         customer: {
@@ -177,6 +180,7 @@ export class BookingControllerBase {
           bookingDate: true,
           checkInDate: true,
           checkOutDate: true,
+          comment: true,
           createdAt: true,
 
           customer: {
@@ -220,6 +224,7 @@ export class BookingControllerBase {
           bookingDate: true,
           checkInDate: true,
           checkOutDate: true,
+          comment: true,
           createdAt: true,
 
           customer: {
