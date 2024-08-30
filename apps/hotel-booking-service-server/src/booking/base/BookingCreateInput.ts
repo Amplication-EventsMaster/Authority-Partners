@@ -11,14 +11,18 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
+
 import {
   IsDate,
   IsOptional,
+  IsString,
+  MaxLength,
   ValidateNested,
   IsNumber,
   Min,
   Max,
 } from "class-validator";
+
 import { Type } from "class-transformer";
 import { CustomerWhereUniqueInput } from "../../customer/base/CustomerWhereUniqueInput";
 import { PaymentCreateNestedManyWithoutBookingsInput } from "./PaymentCreateNestedManyWithoutBookingsInput";
@@ -58,6 +62,18 @@ class BookingCreateInput {
     nullable: true,
   })
   checkOutDate?: Date | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @MaxLength(1000)
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  comment?: string | null;
 
   @ApiProperty({
     required: false,

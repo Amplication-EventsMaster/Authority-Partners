@@ -4,6 +4,7 @@ export type BookingOrderByInput = {
   bookingDate?: SortOrder;
   checkInDate?: SortOrder;
   checkOutDate?: SortOrder;
+  comment?: SortOrder;
   createdAt?: SortOrder;
   customerId?: SortOrder;
   id?: SortOrder;

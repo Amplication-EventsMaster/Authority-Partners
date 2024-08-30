@@ -165,6 +165,7 @@ export class CustomerControllerBase {
         bookingDate: true,
         checkInDate: true,
         checkOutDate: true,
+        comment: true,
         createdAt: true,
 
         customer: {

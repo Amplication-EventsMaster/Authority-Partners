@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
-import { BookingModule } from "./booking/booking.module";
 import { RoomModule } from "./room/room.module";
+import { BookingModule } from "./booking/booking.module";
 import { CustomerModule } from "./customer/customer.module";
 import { HotelModule } from "./hotel/hotel.module";
 import { PaymentModule } from "./payment/payment.module";
@@ -16,8 +16,8 @@ import { ApolloDriver, ApolloDriverConfig } from "@nestjs/apollo";
 @Module({
   controllers: [],
   imports: [
-    BookingModule,
     RoomModule,
+    BookingModule,
     CustomerModule,
     HotelModule,
     PaymentModule,

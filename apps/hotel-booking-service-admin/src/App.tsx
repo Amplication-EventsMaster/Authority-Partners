@@ -5,14 +5,14 @@ import { theme } from "./theme/theme";
 import Login from "./Login";
 import "./App.scss";
 import Dashboard from "./pages/Dashboard";
-import { BookingList } from "./booking/BookingList";
-import { BookingCreate } from "./booking/BookingCreate";
-import { BookingEdit } from "./booking/BookingEdit";
-import { BookingShow } from "./booking/BookingShow";
 import { RoomList } from "./room/RoomList";
 import { RoomCreate } from "./room/RoomCreate";
 import { RoomEdit } from "./room/RoomEdit";
 import { RoomShow } from "./room/RoomShow";
+import { BookingList } from "./booking/BookingList";
+import { BookingCreate } from "./booking/BookingCreate";
+import { BookingEdit } from "./booking/BookingEdit";
+import { BookingShow } from "./booking/BookingShow";
 import { CustomerList } from "./customer/CustomerList";
 import { CustomerCreate } from "./customer/CustomerCreate";
 import { CustomerEdit } from "./customer/CustomerEdit";
@@ -52,18 +52,18 @@ const App = (): React.ReactElement => {
         loginPage={Login}
       >
         <Resource
-          name="Booking"
-          list={BookingList}
-          edit={BookingEdit}
-          create={BookingCreate}
-          show={BookingShow}
-        />
-        <Resource
           name="Room"
           list={RoomList}
           edit={RoomEdit}
           create={RoomCreate}
           show={RoomShow}
+        />
+        <Resource
+          name="Booking"
+          list={BookingList}
+          edit={BookingEdit}
+          create={BookingCreate}
+          show={BookingShow}
         />
         <Resource
           name="Customer"

@@ -6,6 +6,7 @@ export type Booking = {
   bookingDate: Date | null;
   checkInDate: Date | null;
   checkOutDate: Date | null;
+  comment: string | null;
   createdAt: Date;
   customer?: Customer | null;
   id: string;

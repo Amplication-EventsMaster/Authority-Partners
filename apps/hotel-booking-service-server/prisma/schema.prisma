@@ -7,21 +7,6 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Booking {
-  bookingDate  DateTime?
-  checkInDate  DateTime?
-  checkOutDate DateTime?
-  createdAt    DateTime  @default(now())
-  customer     Customer? @relation(fields: [customerId], references: [id])
-  customerId   String?
-  id           String    @id @default(cuid())
-  payments     Payment[]
-  room         Room?     @relation(fields: [roomId], references: [id])
-  roomId       String?
-  totalPrice   Float?
-  updatedAt    DateTime  @updatedAt
-}
-
 model Room {
   bookings      Booking[]
   createdAt     DateTime           @default(now())
@@ -32,6 +17,22 @@ model Room {
   pricePerNight Float?
   typeField     EnumRoomTypeField?
   updatedAt     DateTime           @updatedAt
+}
+
+model Booking {
+  bookingDate  DateTime?
+  checkInDate  DateTime?
+  checkOutDate DateTime?
+  comment      String?
+  createdAt    DateTime  @default(now())
+  customer     Customer? @relation(fields: [customerId], references: [id])
+  customerId   String?
+  id           String    @id @default(cuid())
+  payments     Payment[]
+  room         Room?     @relation(fields: [roomId], references: [id])
+  roomId       String?
+  totalPrice   Float?
+  updatedAt    DateTime  @updatedAt
 }
 
 model Customer {

@@ -6,6 +6,7 @@ export type BookingUpdateInput = {
   bookingDate?: Date | null;
   checkInDate?: Date | null;
   checkOutDate?: Date | null;
+  comment?: string | null;
   customer?: CustomerWhereUniqueInput | null;
   payments?: PaymentUpdateManyWithoutBookingsInput;
   room?: RoomWhereUniqueInput | null;

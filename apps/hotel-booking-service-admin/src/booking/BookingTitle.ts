@@ -1,7 +1,7 @@
 import { Booking as TBooking } from "../api/booking/Booking";
 
-export const BOOKING_TITLE_FIELD = "id";
+export const BOOKING_TITLE_FIELD = "comment";
 
 export const BookingTitle = (record: TBooking): string => {
-  return record.id?.toString() || String(record.id);
+  return record.comment?.toString() || String(record.id);
 };

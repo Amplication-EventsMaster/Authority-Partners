@@ -5,6 +5,7 @@ import {
   SimpleForm,
   EditProps,
   DateTimeInput,
+  TextInput,
   ReferenceInput,
   SelectInput,
   ReferenceArrayInput,
@@ -23,6 +24,7 @@ export const BookingEdit = (props: EditProps): React.ReactElement => {
         <DateTimeInput label="bookingDate" source="bookingDate" />
         <DateTimeInput label="checkInDate" source="checkInDate" />
         <DateTimeInput label="checkOutDate" source="checkOutDate" />
+        <TextInput label="comment" source="comment" />
         <ReferenceInput
           source="customer.id"
           reference="Customer"
